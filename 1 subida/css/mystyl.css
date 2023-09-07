@@ -1,0 +1,483 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+    background-color: #fff;
+}
+
+
+  /* @font-face {
+
+    font-family: 'Ysabeau', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@100&display=swap'); 
+   
+  }  */
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'nav nav nav nav nav nav'
+      'carru carru carru carru carru carru'
+      'one one one two two two'
+      'izq izq cen cen der der'
+      'footer footer footer footer footer footer';
+    gap: 10px;
+    padding: 10px;
+    font-family:'Open Sans', sans-serif;
+  }
+
+.img{
+    max-width: 60%;
+    height: auto;
+    border-radius: 5%;
+}
+
+p{
+    font-size: 1rem;
+    color:#6f6f6f;
+}
+
+.item1 {
+     grid-area: header;
+     background-color: #fff;
+     text-align: center;
+     padding: 20px 0;
+     font-size: 30px;
+     width: 100%;
+    /*  border-radius: 5%;
+     border: 1px solid #e1e1e1;; */
+     /*css del contenido de mi header*/
+     display: grid;
+     grid-template-areas:
+       'logi menu menu menu menu logd'
+       'logi menu menu menu menu logd'
+       'logi info info info info logd';
+     gap: 10px;
+     /* padding: 10px; */
+
+    }
+
+    .item1  > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+
+.logi {
+   grid-area: logi;
+ 
+  }
+#logo{
+  border-radius:50%;
+  width: 211px;
+  height: 205px;
+}
+.menu-nav { grid-area: menu; }
+
+.info { grid-area: info; }
+
+.logd { grid-area: logd; }
+
+/* comienza mi menu nav*/
+
+.item9 {
+     grid-area: nav;
+     background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    width: 100%;
+ }
+
+
+ #nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#nav a {
+  display: block;
+  padding: 0 16px;
+  line-height: inherit;
+  cursor: pointer;
+}
+.nav__menu {
+  line-height: 45px;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+}
+.nav__menu-item {
+  display: inline-block;
+  position: relative;
+}
+.nav__menu-item:hover {
+  background-color:#fff;
+  border-radius: 3%;
+}
+.nav__menu-item:hover .nav__submenu {
+  display: block;
+}
+.nav__submenu {
+  font-weight: 300;
+  text-transform: none;
+  display: none;
+  position: absolute;
+  width: 220px;
+  background-color: #fff;
+  border-radius: 3%;
+}
+.nav__submenu-item:hover {
+  background:#f9f94c;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+/*FIN DE MI MENU NAV////////////////*/
+
+/* comienza mi slider */
+
+
+.item2 { 
+    grid-area: carru;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    max-width: 100%;
+   /*  border-radius: 5%;
+    border: 1px solid #e1e1e1;; */
+    /* max-width: 1000px; */
+    position: relative;
+    margin: auto;
+
+}
+
+.item2 >div >img {
+    height: auto;
+    /* border-radius: 5%; */
+    max-width: 100%;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -40px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .prev {
+  cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -40px; 
+    margin-left: -50%; 
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    /* border-radius: 50%; */
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 50%;
+  }
+  
+  /* Caption text */
+  .text {
+   
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 110px;
+    width: 100%;
+    text-align: center;
+  }
+  .text >a{
+    background-color: #f9f94c;
+    border-radius: 4px;
+  }
+  
+  /* Number text (1/4 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+/* termina mi slider  */
+
+
+
+
+.item3 {
+     grid-area: one;
+     background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    width: 80%;
+    border-radius: 5%;
+    border: 1px solid #e1e1e1;;
+    }
+
+.item4 {
+     grid-area: two;
+     background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    width: 80%;
+    border-radius: 5%;
+    border: 1px solid #e1e1e1;;
+    }
+
+.item5 {
+     grid-area: izq;
+     background-color: #fff;
+     text-align: center;
+     padding: 20px 0;
+     font-size: 30px;
+     width: 100%;
+     border-radius: 5%;
+     border: 1px solid #e1e1e1;;
+    }
+
+.item6 {
+     grid-area: cen; 
+     background-color:  #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    width: 100%;
+    border-radius: 5%;
+    border: 1px solid #e1e1e1;;
+}
+
+.item7 {
+     grid-area: der;
+     background-color: #fff;
+     text-align: center;
+     padding: 20px 0;
+     font-size: 30px;
+     width: 100%;
+     border-radius: 5%;
+     border: 1px solid #e1e1e1;;
+     }
+/*//////////////////////////comienza mi footer//////////////////*/
+
+.item8 {
+     grid-area: footer;
+     background-color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    width: 100%;
+    /*////////////////*/
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    
+    /* padding: 10px; */
+     }
+
+    /*  .item8 > div {
+      background-color: #fff; */
+      /* text-align: center; */
+   /*    padding: 20px 0;
+      font-size: 30px;
+    } */
+/* .item8 >div>h2{
+  text-align: right;
+} */
+
+ ul{
+  list-style: none;
+ }
+     .fo1 {
+      grid-column: 1 / span 4;
+    }
+    
+    
+    .fo2 {
+      grid-column: 1 / span 2;
+      margin-inline-start: auto;
+      margin-block: auto;
+    }
+    .fo3 {
+      grid-column: 3 / span 2;
+      display: inline-flex;
+      /*////////////////*/
+     /*  display: grid;
+      column-gap: 50px;
+      grid-template-columns: auto auto; */
+      /* background-color: #2196F3;
+      padding: 10px; */
+    
+    }
+    .fo4 {
+      grid-column: 1 / span 1;
+    }
+    .fo5 {
+      grid-column: 2 / span 1;
+    }
+    .fo6 {
+      grid-column: 3 / span 1;
+    }
+    .fo7 {
+      grid-column: 4 / span 1;
+    }
+    .fo8 {
+      grid-column: 1 / span 2;
+      font-size: medium;
+    }
+    .fo9 {
+      grid-column: 3 / span 2;
+      font-size:small;
+    }
+    .grid-item{
+      /* text-align: left; */
+      width: 25px;
+      /* background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8); */
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+    #myface{
+width: 45px;
+
+    }
+
+    #myinsta{
+width: 45px;
+    }
+
+/*//////////css cookies////////*/
+
+#cookies{
+  position: fixed; 
+  left: 0px; 
+  right: 0px; 
+  bottom: 0px; 
+  width: 100%; 
+  min-height: 40px; 
+  background: #96f070; 
+  color: #4a5053fa; 
+  z-index: 99999;
+  }
+  
+  #cookies>div{
+  width: 100%; 
+  position: absolute; 
+  padding-left: 5px; 
+  font-family: verdana; 
+  font-size: 12px; 
+  top: 30%; 
+  text-align: center;
+      }
+  
+  
+  
+      #cookies>div>a{ 
+  padding: 6px; 
+  background: #f5f21d; 
+  text-decoration:revert; 
+  color: black; 
+  border-radius: 5px;
+      }
+  
+  div>a{
+  padding-left: 5px; 
+  text-decoration: none; 
+  color: #75eb68;
+  }
+  
+
+
+
